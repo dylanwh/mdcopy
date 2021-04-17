@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0F185C262A836300646DE1 /* Maaku in Frameworks */ = {isa = PBXBuildFile; productRef = FC0F185B262A836300646DE1 /* Maaku */; };
 		FC1F68BD262524D4009709CA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1F68BC262524D4009709CA /* main.swift */; };
-		FC805B782625266F00C2632F /* cmark in Frameworks */ = {isa = PBXBuildFile; productRef = FC805B772625266F00C2632F /* cmark */; };
-		FC805B7F2625415D00C2632F /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = FC805B7E2625415D00C2632F /* SwiftSoup */; };
 		FC805B83262541E200C2632F /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = FC805B82262541E200C2632F /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0F185C262A836300646DE1 /* Maaku in Frameworks */,
 				FC805B83262541E200C2632F /* ArgumentParser in Frameworks */,
-				FC805B782625266F00C2632F /* cmark in Frameworks */,
-				FC805B7F2625415D00C2632F /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +83,8 @@
 			);
 			name = mdcopy;
 			packageProductDependencies = (
-				FC805B772625266F00C2632F /* cmark */,
-				FC805B7E2625415D00C2632F /* SwiftSoup */,
 				FC805B82262541E200C2632F /* ArgumentParser */,
+				FC0F185B262A836300646DE1 /* Maaku */,
 			);
 			productName = mdcopy;
 			productReference = FC1F68B9262524D4009709CA /* mdcopy */;
@@ -117,9 +114,8 @@
 			);
 			mainGroup = FC1F68B0262524D4009709CA;
 			packageReferences = (
-				FC805B762625266F00C2632F /* XCRemoteSwiftPackageReference "cmark-gfm" */,
-				FC805B7D2625415D00C2632F /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				FC805B81262541E200C2632F /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				FC0F185A262A836300646DE1 /* XCRemoteSwiftPackageReference "Maaku" */,
 			);
 			productRefGroup = FC1F68BA262524D4009709CA /* Products */;
 			projectDirPath = "";
@@ -299,20 +295,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FC805B762625266F00C2632F /* XCRemoteSwiftPackageReference "cmark-gfm" */ = {
+		FC0F185A262A836300646DE1 /* XCRemoteSwiftPackageReference "Maaku" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/brokenhandsio/cmark-gfm.git";
+			repositoryURL = "https://github.com/KristopherGBaker/Maaku.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.0;
-			};
-		};
-		FC805B7D2625415D00C2632F /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.2;
+				branch = master;
+				kind = branch;
 			};
 		};
 		FC805B81262541E200C2632F /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
@@ -326,15 +314,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FC805B772625266F00C2632F /* cmark */ = {
+		FC0F185B262A836300646DE1 /* Maaku */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FC805B762625266F00C2632F /* XCRemoteSwiftPackageReference "cmark-gfm" */;
-			productName = cmark;
-		};
-		FC805B7E2625415D00C2632F /* SwiftSoup */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FC805B7D2625415D00C2632F /* XCRemoteSwiftPackageReference "SwiftSoup" */;
-			productName = SwiftSoup;
+			package = FC0F185A262A836300646DE1 /* XCRemoteSwiftPackageReference "Maaku" */;
+			productName = Maaku;
 		};
 		FC805B82262541E200C2632F /* ArgumentParser */ = {
 			isa = XCSwiftPackageProductDependency;
