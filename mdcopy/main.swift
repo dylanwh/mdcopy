@@ -12,14 +12,14 @@ import Maaku
 
 let TransientType = NSPasteboard.PasteboardType("org.nspasteboard.TransientType")
 
-enum TextFormat: String, ExpressibleByArgument {
-    case raw, text, markdown
-}
-
 struct mdcopy: ParsableCommand {
+
+    enum TextFormat: String, ExpressibleByArgument {
+        case raw, text, markdown
+    }
+    
     @Flag(name: .shortAndLong, help: "Enable smart quotes")
     var smartQuotes: Bool = false
-    
     
     @Option(name: .shortAndLong, help: "Format of clipboard plain text version")
     var format: TextFormat = .raw
@@ -29,29 +29,32 @@ struct mdcopy: ParsableCommand {
     
     @Argument(help: "input file")
     var inputFile: String?
-
+    
     mutating func run() throws {
         let markdown = try readInput()
         setClipboard(html: try renderHtml(markdown), text: try renderText(markdown))
     }
     
-    func markdownOptions() -> CMDocumentOption {
-        let options: CMDocumentOption = [.default, .unsafe, .preLang, .strikethroughDoubleTilde]
+    func parse(markdown: Data) throws -> CMDocument {
+        let extensions: CMExtensionOption = .all
+        var options: CMDocumentOption = [.default, .unsafe, .preLang, .strikethroughDoubleTilde]
         if smartQuotes {
-            return options.union( .smart )
+            options.insert(.smart)
         }
-        else {
-            return options
-        }
+        
+        return try CMDocument(
+            text: String(data: markdown, encoding: .utf8)!,
+            options: options,
+            extensions: extensions)
     }
     
     func renderHtml(_ text: Data) throws -> String {
-        let doc = try CMDocument(data: text, options: markdownOptions())
+        let doc = try parse(markdown: text)
         return try doc.renderHtml()
     }
     
     func renderText(_ text: Data) throws -> String {
-        let doc = try CMDocument(data: text, options: markdownOptions())
+        let doc = try parse(markdown: text)
         
         switch format {
         case .raw:
@@ -82,6 +85,7 @@ struct mdcopy: ParsableCommand {
         let pb = NSPasteboard.general
         pb.prepareForNewContents(with: NSPasteboard.ContentsOptions())
         pb.clearContents()
+        /* without the meta, this will be interpreted as latin1! */
         pb.setString("<meta charset=\"UTF-8\">" + html, forType: .html)
         pb.setString(text, forType: .string)
         pb.setString("", forType: TransientType)
