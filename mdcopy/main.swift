@@ -37,6 +37,9 @@ struct mdcopy: ParsableCommand {
   @Argument(help: "input file")
   var inputFile: String?
 
+  @Flag(help: "Remove trailing whitespace from output")
+  var trim: Bool = false
+
   mutating func run() throws {
     let markdown = try readInput()
     setClipboard(html: try renderHtml(markdown), text: try renderText(markdown))
@@ -57,17 +60,24 @@ struct mdcopy: ParsableCommand {
 
   func renderHtml(_ text: Data) throws -> String {
     let doc = try parse(markdown: text)
-    return try doc.renderHtml()
+    let html = "<meta charset=\"UTF-8\">" + (try doc.renderHtml())
+
+    if trim {
+      return html.trimmingCharacters(in: .whitespacesAndNewlines)
+    } else {
+      return html
+    }
   }
 
-  func renderText(_ text: Data) throws -> String {
-    let doc = try parse(markdown: text)
+  func renderText(_ input: Data) throws -> String {
+    let doc = try parse(markdown: input)
+    let text: String
 
     switch format {
     case .raw:
-      return String(data: text, encoding: .utf8)!
+      text = String(data: input, encoding: .utf8)!
     case .markdown:
-      return try doc.renderCommonMark(width: width)
+      text = try doc.renderCommonMark(width: width)
     case .text:
       var currentLink: URL?
       try doc.node.iterator?.enumerate {
@@ -84,7 +94,12 @@ struct mdcopy: ParsableCommand {
         }
         return false
       }
-      return try doc.renderPlainText(width: width)
+      text = try doc.renderPlainText(width: width)
+    }
+    if trim {
+      return text.trimmingCharacters(in: .whitespacesAndNewlines)
+    } else {
+      return text
     }
   }
 
@@ -92,8 +107,7 @@ struct mdcopy: ParsableCommand {
     let pb = NSPasteboard.general
     pb.prepareForNewContents(with: NSPasteboard.ContentsOptions())
     pb.clearContents()
-    /* without the meta, this will be interpreted as latin1! */
-    pb.setString("<meta charset=\"UTF-8\">" + html, forType: .html)
+    pb.setString(html, forType: .html)
     pb.setString(text, forType: .string)
     if transient {
       pb.setString("", forType: TransientType)
