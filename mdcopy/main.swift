@@ -1,9 +1,7 @@
-//
 //  main.swift
 //  mdcopy
 //
-//  Created by Dylan Hardison on 2021-04-12.
-//
+//  Copyright (C) 2021-2023 Dylan Hardison
 
 import ArgumentParser
 import Foundation
@@ -16,7 +14,7 @@ let TransientType = NSPasteboard.PasteboardType("org.nspasteboard.TransientType"
 struct mdcopy: ParsableCommand {
 
   enum TextFormat: String, ExpressibleByArgument {
-    case raw, text, markdown
+    case raw, text, markdown, none
   }
 
   @Flag(name: .shortAndLong, help: "Enable smart quotes")
@@ -69,7 +67,7 @@ struct mdcopy: ParsableCommand {
     }
   }
 
-  func renderText(_ input: Data) throws -> String {
+  func renderText(_ input: Data) throws -> String? {
     let doc = try parse(markdown: input)
     let text: String
 
@@ -95,20 +93,24 @@ struct mdcopy: ParsableCommand {
         return false
       }
       text = try doc.renderPlainText(width: width)
+    case .none:
+      return Optional.none
     }
     if trim {
-      return text.trimmingCharacters(in: .whitespacesAndNewlines)
+      return Optional.some(text.trimmingCharacters(in: .whitespacesAndNewlines))
     } else {
-      return text
+      return Optional.some(text)
     }
   }
 
-  func setClipboard(html: String, text: String) {
+  func setClipboard(html: String, text: String?) {
     let pb = NSPasteboard.general
     pb.prepareForNewContents(with: NSPasteboard.ContentsOptions())
     pb.clearContents()
     pb.setString(html, forType: .html)
-    pb.setString(text, forType: .string)
+    if let t = text {
+      pb.setString(t, forType: .string)
+    }
     if transient {
       pb.setString("", forType: TransientType)
     }

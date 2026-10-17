@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC0F185C262A836300646DE1 /* Maaku in Frameworks */ = {isa = PBXBuildFile; productRef = FC0F185B262A836300646DE1 /* Maaku */; };
-		FC1F68BD262524D4009709CA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1F68BC262524D4009709CA /* main.swift */; };
-		FC805B83262541E200C2632F /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = FC805B82262541E200C2632F /* ArgumentParser */; };
+		FC8DFF3F29694DF1000014A9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8DFF3E29694DF1000014A9 /* main.swift */; };
+		FC8DFF4C29694EF9000014A9 /* Maaku in Frameworks */ = {isa = PBXBuildFile; productRef = FC8DFF4B29694EF9000014A9 /* Maaku */; };
+		FC8DFF4F29695059000014A9 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = FC8DFF4E29695059000014A9 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FC1F68B7262524D4009709CA /* CopyFiles */ = {
+		FC8DFF3929694DF1000014A9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,45 +25,43 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FC1F68B9262524D4009709CA /* mdcopy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mdcopy; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC1F68BC262524D4009709CA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		FC1FDA6B262BA3DC00A522E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC8DFF3B29694DF1000014A9 /* mdcopy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mdcopy; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC8DFF3E29694DF1000014A9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FC1F68B6262524D4009709CA /* Frameworks */ = {
+		FC8DFF3829694DF1000014A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC0F185C262A836300646DE1 /* Maaku in Frameworks */,
-				FC805B83262541E200C2632F /* ArgumentParser in Frameworks */,
+				FC8DFF4F29695059000014A9 /* ArgumentParser in Frameworks */,
+				FC8DFF4C29694EF9000014A9 /* Maaku in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC1F68B0262524D4009709CA = {
+		FC8DFF3229694DF1000014A9 = {
 			isa = PBXGroup;
 			children = (
-				FC1F68BB262524D4009709CA /* mdcopy */,
-				FC1F68BA262524D4009709CA /* Products */,
+				FC8DFF3D29694DF1000014A9 /* mdcopy */,
+				FC8DFF3C29694DF1000014A9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FC1F68BA262524D4009709CA /* Products */ = {
+		FC8DFF3C29694DF1000014A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC1F68B9262524D4009709CA /* mdcopy */,
+				FC8DFF3B29694DF1000014A9 /* mdcopy */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC1F68BB262524D4009709CA /* mdcopy */ = {
+		FC8DFF3D29694DF1000014A9 /* mdcopy */ = {
 			isa = PBXGroup;
 			children = (
-				FC1F68BC262524D4009709CA /* main.swift */,
-				FC1FDA6B262BA3DC00A522E5 /* Info.plist */,
+				FC8DFF3E29694DF1000014A9 /* main.swift */,
 			);
 			path = mdcopy;
 			sourceTree = "<group>";
@@ -71,13 +69,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC1F68B8262524D4009709CA /* mdcopy */ = {
+		FC8DFF3A29694DF1000014A9 /* mdcopy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC1F68C0262524D4009709CA /* Build configuration list for PBXNativeTarget "mdcopy" */;
+			buildConfigurationList = FC8DFF4229694DF1000014A9 /* Build configuration list for PBXNativeTarget "mdcopy" */;
 			buildPhases = (
-				FC1F68B5262524D4009709CA /* Sources */,
-				FC1F68B6262524D4009709CA /* Frameworks */,
-				FC1F68B7262524D4009709CA /* CopyFiles */,
+				FC8DFF3729694DF1000014A9 /* Sources */,
+				FC8DFF3829694DF1000014A9 /* Frameworks */,
+				FC8DFF3929694DF1000014A9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -85,69 +83,69 @@
 			);
 			name = mdcopy;
 			packageProductDependencies = (
-				FC805B82262541E200C2632F /* ArgumentParser */,
-				FC0F185B262A836300646DE1 /* Maaku */,
+				FC8DFF4B29694EF9000014A9 /* Maaku */,
+				FC8DFF4E29695059000014A9 /* ArgumentParser */,
 			);
 			productName = mdcopy;
-			productReference = FC1F68B9262524D4009709CA /* mdcopy */;
+			productReference = FC8DFF3B29694DF1000014A9 /* mdcopy */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FC1F68B1262524D4009709CA /* Project object */ = {
+		FC8DFF3329694DF1000014A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 2710;
 				TargetAttributes = {
-					FC1F68B8262524D4009709CA = {
-						CreatedOnToolsVersion = 12.4;
+					FC8DFF3A29694DF1000014A9 = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = FC1F68B4262524D4009709CA /* Build configuration list for PBXProject "mdcopy" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = FC8DFF3629694DF1000014A9 /* Build configuration list for PBXProject "mdcopy" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = FC1F68B0262524D4009709CA;
+			mainGroup = FC8DFF3229694DF1000014A9;
 			packageReferences = (
-				FC805B81262541E200C2632F /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
-				FC0F185A262A836300646DE1 /* XCRemoteSwiftPackageReference "Maaku" */,
+				FC8DFF4A29694EF9000014A9 /* XCRemoteSwiftPackageReference "Maaku" */,
+				FC8DFF4D29695059000014A9 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
-			productRefGroup = FC1F68BA262524D4009709CA /* Products */;
+			productRefGroup = FC8DFF3C29694DF1000014A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC1F68B8262524D4009709CA /* mdcopy */,
+				FC8DFF3A29694DF1000014A9 /* mdcopy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FC1F68B5262524D4009709CA /* Sources */ = {
+		FC8DFF3729694DF1000014A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1F68BD262524D4009709CA /* main.swift in Sources */,
+				FC8DFF3F29694DF1000014A9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FC1F68BE262524D4009709CA /* Debug */ = {
+		FC8DFF4029694DF1000014A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -173,13 +171,13 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
-				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DSTROOT = /tmp/.dst;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -194,25 +192,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = /Users/dylan/Git/dylanwh/mdcopy/mdcopy/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		FC1F68BF262524D4009709CA /* Release */ = {
+		FC8DFF4129694DF1000014A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -238,13 +235,13 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
-				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DSTROOT = /tmp/.dst;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -253,37 +250,58 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = /Users/dylan/Git/dylanwh/mdcopy/mdcopy/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		FC1F68C1262524D4009709CA /* Debug */ = {
+		FC8DFF4329694DF1000014A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Dylan Hardison (7MAQ6Y7MWC)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: Dylan Hardison (7MAQ6Y7MWC)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7MAQ6Y7MWC;
-				DSTROOT = /tmp/.dst;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7MAQ6Y7MWC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.4;
+				INFOPLIST_KEY_CFBundleDisplayName = mdcopy;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (C) 2021-2026 Dylan Hardison";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.hardison.mdcopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		FC1F68C2262524D4009709CA /* Release */ = {
+		FC8DFF4429694DF1000014A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Dylan Hardison (7MAQ6Y7MWC)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: Dylan Hardison (7MAQ6Y7MWC)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7MAQ6Y7MWC;
-				DSTROOT = /tmp/.dst;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 7MAQ6Y7MWC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.4;
+				INFOPLIST_KEY_CFBundleDisplayName = mdcopy;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (C) 2021-2026 Dylan Hardison";
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.hardison.mdcopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -293,20 +311,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC1F68B4262524D4009709CA /* Build configuration list for PBXProject "mdcopy" */ = {
+		FC8DFF3629694DF1000014A9 /* Build configuration list for PBXProject "mdcopy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC1F68BE262524D4009709CA /* Debug */,
-				FC1F68BF262524D4009709CA /* Release */,
+				FC8DFF4029694DF1000014A9 /* Debug */,
+				FC8DFF4129694DF1000014A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC1F68C0262524D4009709CA /* Build configuration list for PBXNativeTarget "mdcopy" */ = {
+		FC8DFF4229694DF1000014A9 /* Build configuration list for PBXNativeTarget "mdcopy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC1F68C1262524D4009709CA /* Debug */,
-				FC1F68C2262524D4009709CA /* Release */,
+				FC8DFF4329694DF1000014A9 /* Debug */,
+				FC8DFF4429694DF1000014A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -314,36 +332,36 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FC0F185A262A836300646DE1 /* XCRemoteSwiftPackageReference "Maaku" */ = {
+		FC8DFF4A29694EF9000014A9 /* XCRemoteSwiftPackageReference "Maaku" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KristopherGBaker/Maaku.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
 			};
 		};
-		FC805B81262541E200C2632F /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+		FC8DFF4D29695059000014A9 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.0;
+				minimumVersion = 0.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FC0F185B262A836300646DE1 /* Maaku */ = {
+		FC8DFF4B29694EF9000014A9 /* Maaku */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FC0F185A262A836300646DE1 /* XCRemoteSwiftPackageReference "Maaku" */;
+			package = FC8DFF4A29694EF9000014A9 /* XCRemoteSwiftPackageReference "Maaku" */;
 			productName = Maaku;
 		};
-		FC805B82262541E200C2632F /* ArgumentParser */ = {
+		FC8DFF4E29695059000014A9 /* ArgumentParser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FC805B81262541E200C2632F /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			package = FC8DFF4D29695059000014A9 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
 			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = FC1F68B1262524D4009709CA /* Project object */;
+	rootObject = FC8DFF3329694DF1000014A9 /* Project object */;
 }
